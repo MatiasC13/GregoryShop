@@ -31,22 +31,12 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
   return (
     <ContactContainer id={id}>
       <Row justify="space-between" align="middle">
-        <Col lg={12} md={11} sm={24} xs={24}>
+        <Col lg={14} md={14} sm={24} xs={24}>
           <Slide direction="left">
             <Block title={title} content={""} />
-            <a
-              href={urlWhatsaapp("Tengo una consulta", "59897183426")}
-              style={{ display: "flex", justifyContent: "center" }}
-            >
-              <img
-                src="/img/svg/whatsapp.png"
-                alt=""
-                style={{ width: "7rem" }}
-              />
-            </a>
           </Slide>
         </Col>
-        <Col lg={12} md={12} sm={24} xs={24}>
+        <Col lg={10} md={10} sm={24} xs={24}>
           <Slide
             direction="right"
             style={{
@@ -55,12 +45,22 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
               justifyContent: "center",
             }}
           >
-            <SvgIcon
+            <a
+              href={urlWhatsaapp("Tengo una consulta", "59897183426")}
+              style={{ display: "flex", justifyContent: "center" }}
+            >
+              <img
+                src="/img/svg/whatsapp.png"
+                alt=""
+                style={{ width: "9rem" }}
+              />
+            </a>
+            {/* <SvgIcon
               src="simpleshopredondo.gif"
               width="200rem"
               height="200rem"
-            />
-            <a
+            /> */}
+            {/* <a
               href={"https://gregory-shop-ropa-simpleshop.vercel.app/"}
               target="blank"
               className="ancla"
@@ -93,7 +93,7 @@ const Contact = ({ title, content, id, t }: ContactProps) => {
               }}
             >
               Ver demo Delivery Comida
-            </a>
+            </a> */}
             {/* <FormGroup autoComplete="off" onSubmit={handleSubmit}>
               <Col span={24}>
                 <Input

@@ -1,5 +1,5 @@
-import { Row } from "antd";
 import { withTranslation } from "react-i18next";
+import { Row } from "antd";
 import { Slide } from "react-awesome-reveal";
 import { MiddleBlockSection } from "./styles";
 

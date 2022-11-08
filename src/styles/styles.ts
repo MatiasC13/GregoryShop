@@ -75,6 +75,7 @@ export const Styles = createGlobalStyle`
         color: #212121;
         font-size: 21px;        
         line-height: 1.41;
+        text-align: justify;
     }
 
     h1 {

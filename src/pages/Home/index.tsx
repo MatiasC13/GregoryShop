@@ -14,11 +14,10 @@ const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
 const Container = lazy(() => import("../../common/Container"));
 const ScrollToTop = lazy(() => import("../../common/ScrollToTop"));
 const ContentBlock = lazy(() => import("../../components/ContentBlock"));
+const Tiendas = lazy(() => import("../../components/Tiendas"));
 
 const Home = () => {
   const history = useHistory();
-
-
 
   return (
     <Container>
@@ -30,12 +29,15 @@ const Home = () => {
           right: "0.1rem",
           width: "180px",
         }}
-      // onClick={() => scrollTo("contact")}
+        // onClick={() => scrollTo("contact")}
       >
         <Span>
           {/* <Button>{t("Contacto")}</Button> */}
           {/* <Link to="/payment"> */}
-          <a target="blank" href="https://buy.stripe.com/dR62bG5ZTbiXeWIcMN">  <Button > Quiero mi tienda Ya!</Button></a>
+          <a target="blank" href="https://buy.stripe.com/dR62bG5ZTbiXeWIcMN">
+            {" "}
+            <Button> Quiero mi tienda Ya!</Button>
+          </a>
           {/* </Link> */}
         </Span>
       </CustomNavLinkSmall>
@@ -45,6 +47,7 @@ const Home = () => {
         content={MiddleBlockContent.text}
         button={MiddleBlockContent.button}
       />
+
       <ContentBlock
         type="right"
         title={IntroContent.title}
@@ -53,6 +56,8 @@ const Home = () => {
         icon="developer.svg"
         id="intro"
       />
+
+      <Tiendas />
 
       <ContentBlock
         type="left"

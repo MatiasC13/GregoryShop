@@ -2,11 +2,8 @@ import { Row } from "antd";
 import { withTranslation } from "react-i18next";
 import { SvgIcon } from "../../common/SvgIcon";
 import Container from "../../common/Container";
-
 import i18n from "i18next";
-import {
-  Extra,
-} from "./styles";
+import { Extra } from "./styles";
 
 interface SocialLinkProps {
   href: string;
@@ -14,7 +11,6 @@ interface SocialLinkProps {
 }
 
 const Footer = () => {
-
   const urlWhatsaapp = (text: string, whatshapNumber: string) =>
     `https://wa.me/${whatshapNumber}?text=${encodeURIComponent(text)}`;
   const SocialLink = ({ href, src }: SocialLinkProps) => {
@@ -33,7 +29,6 @@ const Footer = () => {
 
   return (
     <>
-
       <Extra>
         <Container border={true}>
           <Row
@@ -41,9 +36,17 @@ const Footer = () => {
             align="middle"
             style={{ paddingTop: "3rem" }}
           >
-
-            <SocialLink href={"https://www.instagram.com/gregorytechshop/"} src="instagram.png" />
-            <SocialLink href={urlWhatsaapp("Hola ¿Cómo hago para tener mi supertienda?", "59897183426")} src="whatsapp.png" />
+            <SocialLink
+              href={"https://www.instagram.com/tiendasgregory/"}
+              src="instagram.png"
+            />
+            <SocialLink
+              href={urlWhatsaapp(
+                "Hola ¿Cómo hago para tener mi supertienda?",
+                "59897183426"
+              )}
+              src="whatsapp.png"
+            />
 
             {/* </FooterContainer> */}
           </Row>
