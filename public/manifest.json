@@ -1,6 +1,7 @@
 {
   "short_name": "Gregory",
-  "name": "Gregory",
+  "name": "Tiendas Gregory",
+  "scope": "/",
   "icons": [
     {
       "src": "img/icons/icon-72x72.png",
@@ -43,7 +44,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"

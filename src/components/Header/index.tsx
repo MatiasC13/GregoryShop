@@ -2,19 +2,18 @@ import { useState } from "react";
 import { Row, Col, Drawer } from "antd";
 import { withTranslation } from "react-i18next";
 import Container from "../../common/Container";
-import { SvgIcon } from "../../common/SvgIcon";
 import { Button } from "../../common/Button";
 import {
   HeaderSection,
   LogoContainer,
   Burger,
   NotHidden,
-  // Menu,
   CustomNavLinkSmall,
   Label,
   Outline,
   Span,
 } from "./styles";
+import { SvgIcon } from "../../common/SvgIcon";
 
 const Header = ({ t }: any) => {
   const [visible, setVisibility] = useState(false);
@@ -37,15 +36,6 @@ const Header = ({ t }: any) => {
     };
     return (
       <>
-        {/* <CustomNavLinkSmall onClick={() => scrollTo("about")}>
-          <Span>{t("About")}</Span>
-        </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("mission")}>
-          <Span>{t("Mission")}</Span>
-        </CustomNavLinkSmall>
-        <CustomNavLinkSmall onClick={() => scrollTo("product")}>
-          <Span>{t("Product")}</Span>
-        </CustomNavLinkSmall> */}
         <CustomNavLinkSmall
           style={{ width: "180px" }}
           onClick={() => scrollTo("contact")}
@@ -62,7 +52,7 @@ const Header = ({ t }: any) => {
     <HeaderSection>
       <Container>
         <Row justify="space-between">
-          <LogoContainer to="/" aria-label="homepage">
+          <LogoContainer to="/" aria-label="Logo de la empresa">
             <SvgIcon src="simpleshopredondo.gif" width="150px" height="150px" />
           </LogoContainer>
           <NotHidden>

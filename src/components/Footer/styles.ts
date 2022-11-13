@@ -9,7 +9,6 @@ export const FooterSection = styled("footer")`
 export const Title = styled("h4")`
   font-size: 22px;
   text-transform: capitalize;
-  color: #18216d;
 
   @media screen and (max-width: 414px) {
     padding: 1.5rem 0;
@@ -21,12 +20,6 @@ export const NavLink = styled(Link)`
   font-size: 1rem;
   margin-bottom: 0.625rem;
   transition: all 0.2s ease-in-out;
-
-  &:hover,
-  &:active,
-  &:focus {
-    color: #15418e;
-  }
 `;
 
 export const Extra = styled("section")`
@@ -44,7 +37,6 @@ export const LogoContainer = styled("div")`
 `;
 
 export const Para = styled("div")`
-  color: #18216d;
   font-size: 14px;
   width: 70%;
 `;
@@ -62,24 +54,15 @@ export const Large = styled(Link)<any>`
   max-width: max-content;
 
   &:hover {
-    color: rgb(255, 130, 92);
     text-underline-position: under;
-    text-decoration: rgb(255, 130, 92) wavy underline;
   }
 `;
 
 export const Chat = styled("p")`
-  color: #18216d;
   max-width: fit-content;
-  border-bottom: 1px solid #18216d;
   cursor: pointer;
   margin-top: 1rem;
   transition: all 0.3s ease-in-out;
-
-  &:hover {
-    border-bottom: 1px solid rgb(255, 130, 92);
-    color: rgb(255, 130, 92);
-  }
 `;
 
 export const Empty = styled("div")`
@@ -119,17 +102,12 @@ export const FooterContainer = styled("div")`
     margin-right: 15px;
     width: 25px;
     height: 25px;
-
-    &:hover {
-      fill: rgb(255, 130, 92);
-    }
   }
 `;
 
 export const Language = styled("h4")`
   font-size: 22px;
   text-transform: capitalize;
-  color: #18216d;
 
   @media screen and (max-width: 414px) {
     padding: 1.5rem 0;
@@ -139,7 +117,6 @@ export const Language = styled("h4")`
 export const Label = styled("label")`
   font-size: 22px;
   text-transform: capitalize;
-  color: #18216d;
   display: block;
   margin-bottom: 2rem;
   font-family: "Motiva Sans Bold", serif;

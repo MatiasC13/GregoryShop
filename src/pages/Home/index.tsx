@@ -1,13 +1,11 @@
 import { lazy } from "react";
 import IntroContent from "../../content/IntroContent.json";
-import MiddleBlockContent from "../../content/MiddleBlockContent.json";
 import AboutContent from "../../content/AboutContent.json";
 import MissionContent from "../../content/MissionContent.json";
 import ProductContent from "../../content/ProductContent.json";
 import ContactContent from "../../content/ContactContent.json";
 import { Button } from "../../common/Button";
 import { CustomNavLinkSmall, Span } from "../../components/Header/styles";
-import { useHistory } from "react-router-dom";
 
 const Contact = lazy(() => import("../../components/ContactForm"));
 const MiddleBlock = lazy(() => import("../../components/MiddleBlock"));
@@ -17,8 +15,6 @@ const ContentBlock = lazy(() => import("../../components/ContentBlock"));
 const Tiendas = lazy(() => import("../../components/Tiendas"));
 
 const Home = () => {
-  const history = useHistory();
-
   return (
     <Container>
       <CustomNavLinkSmall
@@ -29,30 +25,21 @@ const Home = () => {
           right: "0.1rem",
           width: "180px",
         }}
-        // onClick={() => scrollTo("contact")}
       >
         <Span>
-          {/* <Button>{t("Contacto")}</Button> */}
-          {/* <Link to="/payment"> */}
           <a target="blank" href="https://buy.stripe.com/dR62bG5ZTbiXeWIcMN">
-            {" "}
-            <Button> Quiero mi tienda Ya!</Button>
+            <Button aria-label="Ir a realizar mi compra."> Quiero mi tienda Ya!</Button>
           </a>
-          {/* </Link> */}
         </Span>
       </CustomNavLinkSmall>
       <ScrollToTop />
-      <MiddleBlock
-        title={MiddleBlockContent.title}
-        content={MiddleBlockContent.text}
-        button={MiddleBlockContent.button}
-      />
+
+      <MiddleBlock/>
 
       <ContentBlock
         type="right"
         title={IntroContent.title}
         content={IntroContent.text}
-        // button={IntroContent.button}
         icon="developer.svg"
         id="intro"
       />

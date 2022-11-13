@@ -2,27 +2,26 @@ import { Row } from "antd";
 import { withTranslation } from "react-i18next";
 import { SvgIcon } from "../../common/SvgIcon";
 import Container from "../../common/Container";
-import i18n from "i18next";
 import { Extra } from "./styles";
 
 interface SocialLinkProps {
   href: string;
   src: string;
+  aria: string;
 }
 
 const Footer = () => {
-  const urlWhatsaapp = (text: string, whatshapNumber: string) =>
-    `https://wa.me/${whatshapNumber}?text=${encodeURIComponent(text)}`;
-  const SocialLink = ({ href, src }: SocialLinkProps) => {
+  
+  const SocialLink = ({ href, src, aria }: SocialLinkProps) => {
     return (
       <a
         href={href}
         target="_blank"
         rel="noopener noreferrer"
         key={src}
-        aria-label={src}
+        aria-label={aria}
       >
-        <SvgIcon src={src} width="50px" height="50px" />
+        <SvgIcon src={src}  width="50px" height="50px" />
       </a>
     );
   };
@@ -37,18 +36,15 @@ const Footer = () => {
             style={{ paddingTop: "3rem" }}
           >
             <SocialLink
-              href={"https://www.instagram.com/tiendasgregory/"}
-              src="instagram.png"
+              href={"https://www.facebook.com/tiendasgregory/"}
+              src="facebook.webp"
+              aria="ir a Facebook"
             />
             <SocialLink
-              href={urlWhatsaapp(
-                "Hola ¿Cómo hago para tener mi supertienda?",
-                "59897183426"
-              )}
-              src="whatsapp.png"
+              href={"https://www.instagram.com/tiendasgregory/"}
+              src="instagram.webp"
+              aria="ir a Instagram"
             />
-
-            {/* </FooterContainer> */}
           </Row>
         </Container>
       </Extra>

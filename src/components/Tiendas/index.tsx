@@ -45,7 +45,6 @@ const Tiendas = () => {
             style={{
               fontSize: "1.5rem",
               color: "#212121",
-              //   color: "#2F855A",
             }}
           >
             <span>🌟</span>
